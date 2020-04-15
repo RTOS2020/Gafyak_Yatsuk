@@ -1,14 +1,10 @@
 
 #include "stm32f10x.h"
-#include "stm32f10x_gpio.h"
-#include "stm32f10x_rcc.h"
 
 void delay();
 
 int main(void)
 {
-  GPIO_InitTypeDef  GPIO_InitStructure;
-
   /* Initialize LED which connected to GPIOB and GPIOC */
   // Enable PORTC Clock
 	RCC -> APB2ENR |= RCC_APB2ENR_IOPCEN;
